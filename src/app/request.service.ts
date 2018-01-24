@@ -9,10 +9,18 @@ export class RequestService {
   requests: FirebaseListObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-  this.requests = database.list('requests');
- }
+    this.requests = database.list('requests');
+  }
 
   getRequests() {
     return this.requests;
+  }
+
+  addRequest(newRequest: Request) {
+    this.requests.push(newRequest);
+  }
+
+  getRequestById(requestId: string) {
+    return this.database.object('requests/' + requestId);
   }
 }

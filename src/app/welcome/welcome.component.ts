@@ -22,7 +22,7 @@ export class WelcomeComponent implements OnInit {
   }
 
   goToDetailPage(clickedRequest: Request) {
-    this.router.navigate(['requests', clickedRequest.username]);
+    this.router.navigate(['requests', clickedRequest.$key]);
   }
 
 }

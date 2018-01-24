@@ -1,0 +1,10 @@
+<div>
+  <h3>{{(requestToDisplay | async)?.title}}</h3>
+  <h4>{{(requestToDisplay | async)?.category}}</h4>
+  <p>{{(requestToDisplay | async)?.description}}</p>
+  <p>{{(requestToDisplay | async)?.username}}</p>
+  <p>{{(requestToDisplay | async)?.email}}</p>
+  <hr>
+  <p>Amount Requested: {{(requestToDisplay | async)?.amount_requested}}</p>
+  <p>Current Amount: {{(requestToDisplay | async)?.amount_collected}}</p>
+</div>
