@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.jumbotron {
+  text-align: center;
+  background-image: url(./assets/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.jumbotron h1 {
+  color: red;
+  font-size: 5.5rem;
+  text-shadow: 1px 1px 3px black;
+  margin-top: 200px;
+}

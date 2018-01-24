@@ -1,0 +1,26 @@
+{ "requests": [{
+    "category": "Vacation",
+    "title": "Send me to Greece",
+    "username": "floyd",
+    "email": "floyd@c.com",
+    "description": "Its raining in Portland and I want to visit the Mediteranean Sea",
+    "amount_requested": 1000,
+    "amount_collected": 10,
+    }, {
+    "category": "Medical",
+    "title": "Help me remove my tonsils",
+    "username": "florence",
+    "email": "florence@d.com",
+    "description": "I hate my tonsils. I want them gone. Help me to reach my goal.",
+    "amount_requested": 1800,
+    "amount_collected": 150,
+    }, {
+    "category": "Business",
+    "title": "Help me open a food cart",
+    "username": "frank",
+    "email": "frank@e.com",
+    "description": "I want to serve people food from a foodcart, it is my life long dream",
+    "amount_requested": 20000,
+    "amount_collected": 4,
+  }]
+}
