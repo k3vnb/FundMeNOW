@@ -22,7 +22,7 @@ const appRoutes: Routes = [
     component: AdminComponent
   },
   {
-  path: 'request/:id',
+  path: 'requests/:id',
     component: RequestDetailComponent
   }
  ];

@@ -22,6 +22,8 @@ export class WelcomeComponent implements OnInit {
   }
 
   goToDetailPage(clickedRequest: Request) {
+    console.log("Oh hi");
+    console.log(clickedRequest.$key);
     this.router.navigate(['requests', clickedRequest.$key]);
   }
 
