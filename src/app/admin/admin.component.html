@@ -1,3 +1,51 @@
-<p>
-  admin works!
-</p>
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Add Your Own Request</h3>
+  </div>
+  <div class="card-body">
+    <div>
+      <label>Category</label>
+      <select #newCategory class="form-control" (change)="onChange($event.target.value)">
+        <option value="vacation">Vacation</option>
+        <option value="medical">Medical</option>
+        <option value="business">Business</option>
+        <option value="misc">Misc</option>
+      </select>
+    </div>
+    <div>
+      <label>Title:</label>
+      <br>
+      <input #newTitle>
+    </div>
+
+    <div>
+      <label>Username:</label>
+      <br>
+      <input #newUsername>
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <br>
+      <input #newEmail>
+    </div>
+
+    <div>
+      <label>Description:</label>
+      <br>
+      <textarea #newDescription></textarea>
+    </div>
+
+    <div>
+      <label>Amount Requested:</label>
+      <br>
+      <input #newAmount_requested >
+    </div>
+
+    <button (click)="submitForm(newCategory.value, newTitle.value, newUsername.value, newEmail.value, newDescription.value, newAmount_requested.value); newCategory.value=''; newTitle.value=''; newUsername.value=''; newEmail.value=''; newDescription.value=''; newAmount_requested.value=''">Submit</button>
+  </div>
+</div>
+
+<div>
+  <app-welcome></app-welcome>
+</div>

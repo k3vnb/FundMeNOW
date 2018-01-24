@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
+## Cloning
+Project utilizes firebase as a server. To clone this project, you must get your own firebase key, which you can do by going to https://firebase.google.com/, clicking "Get Started", creating a project, and clicking "Add Firebase to your web app".
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

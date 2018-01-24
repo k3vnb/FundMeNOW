@@ -1,3 +1,10 @@
-<p>
-  welcome works!
-</p>
+<div class="requests">
+  <div *ngFor="let request of requests | async" (click)="goToDetailPage(request)" class="card">
+    <div class="card-body">
+      <h3>{{request.title}}</h3>
+      <h4>Submitted by {{request.username}}</h4>
+      <p>{{request.category}}</p>
+
+    </div>
+  </div>
+</div>
