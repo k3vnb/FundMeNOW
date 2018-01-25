@@ -5,13 +5,13 @@
   <p>{{requestToDisplay?.username}}</p>
   <p>{{requestToDisplay?.email}}</p>
   <hr>
-  <p>Amount Requested: {{requestToDisplay?.amount_requested}}</p>
-  <p>Current Amount: {{requestToDisplay?.amount_collected}}</p>
+  <p>Amount Requested: {{requestToDisplay?.amount_requested | currency }}</p>
+  <p>Current Amount: {{requestToDisplay?.amount_collected | currency }}</p>
   <h4>Donate</h4>
 
   <label>Donation Amount</label>
   <br>
-
-  <button (click)="beginDonation(requestToDisplay)">Click to donate $100</button>
+  <input type="number" #newDonationAmount>
+  <button (click)="beginDonation(requestToDisplay, newDonationAmount.value)">Click to donate</button>
     <hr>
 </div>

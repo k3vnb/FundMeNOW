@@ -35,10 +35,9 @@ export class RequestDetailComponent implements OnInit {
     })
   }
 
-  beginDonation(requestToDisplay) {
-    console.log("hello");
-    console.log(this.requestToDisplay);
-    this.requestService.donateToRequest(this.requestToDisplay);
+  beginDonation(requestToDisplay, newDonationAmount) {
+    newDonationAmount = parseInt(newDonationAmount);
+    this.requestService.donateToRequest(this.requestToDisplay, newDonationAmount);
   }
 
 }

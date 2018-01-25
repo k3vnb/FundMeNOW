@@ -40,10 +40,10 @@ export class RequestService {
   }
 
 
-  donateToRequest(localUpdatedRequest) {
+  donateToRequest(localUpdatedRequest, newDonationAmount) {
     var requestEntryInFirebase = this.getRequestById(localUpdatedRequest.$key);
-    var donationAmount = 100; //come from a form Input
-    localUpdatedRequest.amount_collected += donationAmount;
+    var newDonationAmount ; //come from a form Input
+    localUpdatedRequest.amount_collected += newDonationAmount;
     console.log(localUpdatedRequest.amount_collected);
     requestEntryInFirebase.update({amount_collected: localUpdatedRequest.amount_collected});
   }
