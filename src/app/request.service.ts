@@ -24,6 +24,7 @@ export class RequestService {
     return this.database.object('/requests/' + requestId);
   }
 
+
   updateRequest(localUpdatedRequest){
   var requestEntryInFirebase = this.getRequestById(localUpdatedRequest.$key);
   requestEntryInFirebase.update({title: localUpdatedRequest.title,
@@ -32,4 +33,24 @@ export class RequestService {
                               description: localUpdatedRequest.description,
                               amount_requested: localUpdatedRequest.amount_requested});
   }
+
+  deleteRequest(localRequestToDelete){
+    var requestEntryInFirebase = this.getRequestById(localRequestToDelete.$key);
+    requestEntryInFirebase.remove();
+  }
+
+
+  donateToRequest(localUpdatedRequest) {
+    var requestEntryInFirebase = this.getRequestById(localUpdatedRequest.$key);
+    var donationAmount = 100; //come from a form Input
+    localUpdatedRequest.amount_collected += donationAmount;
+    console.log(localUpdatedRequest.amount_collected);
+    requestEntryInFirebase.update({amount_collected: localUpdatedRequest.amount_collected});
+  }
+
+  // donateToRequest(localUpdatedRequest){
+  // var requestEntryInFirebase = this.getRequestById(localUpdatedRequest.$key);
+  // requestEntryInFirebase.update({
+  //                             amount_requested: '50'});
+  // }
 }

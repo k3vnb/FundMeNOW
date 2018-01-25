@@ -18,7 +18,20 @@ export class EditRequestComponent implements OnInit {
   }
 
   beginUpdatingRequest(requestToUpdate){
-  this.requestService.updateRequest(requestToUpdate);
+    this.requestService.updateRequest(requestToUpdate);
+  }
+
+  beginDeletingRequest(requestToDelete){
+    if(confirm("Are you sure you want to delete this request?")) {
+      this.requestService.deleteRequest(requestToDelete);
+    }
+  }
+
+  beginDonation(requestToUpdate) {
+    console.log("hello" + requestToUpdate);
+    this.requestService.donateToRequest(requestToUpdate);
+
+    // console.log(x);
   }
 
 }

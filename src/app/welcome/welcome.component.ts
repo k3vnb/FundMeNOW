@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Request } from '../request.model';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 import { RequestService } from '../request.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 
