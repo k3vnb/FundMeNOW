@@ -26,11 +26,6 @@ export class RequestDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private location: Location, private requestService: RequestService) { }
 
   ngOnInit() {
-    // this.route.params.forEach((urlParameters) => {
-    // this.requestId = urlParameters['id'];
-    // });
-    // this.requestToDisplay = this.requestService.getRequestById(this.requestId);
-    // this.requests = this.requestService.getRequests();
     this.route.params.forEach((urlParametersArray) => {
       this.requestId = urlParametersArray['id'];
     });

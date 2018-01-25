@@ -13,7 +13,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { EditRequestComponent } from './edit-request/edit-request.component';
 import { RequestDetailComponent } from './request-detail/request-detail.component';
-import { DonateComponent } from './donate/donate.component';
+
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,7 +30,6 @@ export const firebaseConfig = {
     AdminComponent,
     EditRequestComponent,
     RequestDetailComponent,
-    DonateComponent
   ],
   imports: [
     BrowserModule,

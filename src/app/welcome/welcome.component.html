@@ -4,8 +4,8 @@
       <h3 (click)="goToDetailPage(request)">{{request.title}}</h3>
       <h4>Submitted by {{request.username}}</h4>
       <p>{{request.category}}</p>
-      <p>{{request.$key}}</p>
-      <app-donate [selectedRequest]="request"></app-donate>
+      <p>Goal: {{request.amount_requested | currency}}</p>
+      <p>Current Donations: {{request.amount_collected | currency}}</p>
       <div *ngIf="currentRoute === '/admin'">
         <hr>
         <app-edit-request [selectedRequest]="request">  </app-edit-request>

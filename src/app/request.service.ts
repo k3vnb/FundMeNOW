@@ -48,9 +48,4 @@ export class RequestService {
     requestEntryInFirebase.update({amount_collected: localUpdatedRequest.amount_collected});
   }
 
-  // donateToRequest(localUpdatedRequest){
-  // var requestEntryInFirebase = this.getRequestById(localUpdatedRequest.$key);
-  // requestEntryInFirebase.update({
-  //                             amount_requested: '50'});
-  // }
 }

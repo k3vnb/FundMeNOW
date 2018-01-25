@@ -30,8 +30,6 @@ export class EditRequestComponent implements OnInit {
   beginDonation(requestToUpdate) {
     console.log("hello" + requestToUpdate);
     this.requestService.donateToRequest(requestToUpdate);
-
-    // console.log(x);
   }
 
 }
