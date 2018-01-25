@@ -1,11 +1,14 @@
 <div class="requests">
-  <div *ngFor="let request of requests | async" (click)="goToDetailPage(request)" class="card">
+  <div *ngFor="let request of requests | async" class="card">
     <div class="card-body">
-      <h3>{{request.title}}</h3>
+      <h3 (click)="goToDetailPage(request)">{{request.title}}</h3>
       <h4>Submitted by {{request.username}}</h4>
       <p>{{request.category}}</p>
       <p>{{request.$key}}</p>
-
+      <div *ngIf="currentRoute === '/admin'">
+        <hr>
+        <app-edit-request [selectedRequest]="request"></app-edit-request>
+      </div>
     </div>
   </div>
 </div>

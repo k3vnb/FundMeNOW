@@ -1,3 +1,21 @@
-<p>
-  edit-request works!
-</p>
+<h4>Edit Request</h4>
+
+<label>New Request Title:</label>
+<input [(ngModel)]="selectedRequest.title">
+<br>
+
+<label>New Request Username:</label>
+<input [(ngModel)]="selectedRequest.username">
+<br>
+
+<label>New Request Email:</label>
+<input [(ngModel)]="selectedRequest.email">
+<br>
+
+<label>New Request Description:</label>
+<input [(ngModel)]="selectedRequest.description">
+
+<label>New Requested Amount:</label>
+<input [(ngModel)]="selectedRequest.amount_requested">
+<br>
+<button (click)="beginUpdatingRequest(selectedRequest)">Update</button>

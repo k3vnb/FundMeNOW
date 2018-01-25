@@ -21,6 +21,15 @@ export class RequestService {
   }
 
   getRequestById(requestId: string) {
-    return this.database.object('requests/' + requestId);
+    return this.database.object('/requests/' + requestId);
+  }
+
+  updateRequest(localUpdatedRequest){
+  var requestEntryInFirebase = this.getRequestById(localUpdatedRequest.$key);
+  requestEntryInFirebase.update({title: localUpdatedRequest.title,
+                              username: localUpdatedRequest.username,
+                              email: localUpdatedRequest.email,
+                              description: localUpdatedRequest.description,
+                              amount_requested: localUpdatedRequest.amount_requested});
   }
 }
