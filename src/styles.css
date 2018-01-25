@@ -1,17 +1,23 @@
+body {
+  background-color: #ffc10730;
+}
 /* You can add global styles to this file, and also import other style files */
 .jumbotron {
   text-align: center;
-  background-image: url(./assets/banner.jpg);
+  background-image: url(./assets/banner2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
 }
 .jumbotron h1 {
   color: red;
   font-size: 5.5rem;
-  text-shadow: 1px 1px 3px black;
+  text-shadow: 3px 3px 5px #000000d1;
   margin-top: 200px;
+  font-family: 'Shrikhand', cursive;
 }
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -19,4 +25,13 @@
   height: 60px;
   background-color: #f5f5f5;
   padding: 15px;
+}
+
+.card {
+  margin: 4vh 1vw;
+  box-shadow: 1px 1px 3px black;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
 }
