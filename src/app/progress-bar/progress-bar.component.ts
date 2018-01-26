@@ -28,10 +28,6 @@ export class ProgressBarComponent {
     @Input() selectedRequest;
     requestId: string;
     requestToDisplay;
-    value = 100;
-
-    @Input()
-    max = 65;
 
     constructor(private route: ActivatedRoute, private location: Location, private requestService: RequestService) { }
 
@@ -41,15 +37,14 @@ export class ProgressBarComponent {
       });
       this.requestService.getRequestById(this.requestId).subscribe(dataLastEmittedFromObserver => {
         this.requestToDisplay = dataLastEmittedFromObserver;
+        console.log("HOLA" + this.requestToDisplay.amount_collected);
+        console.log("HOLA" + this.requestToDisplay.amount_requested);
         return this.requestToDisplay;
       })
     }
 
-    getProgress() {
-        if (this.max === 0)
-            return 0;
-
-        return this.value / this.max * 100;
+    getProgress(requestToDisplay) {
+        return this.requestToDisplay.amount_collected / this.requestToDisplay.amount_requested * 100;
     }
 
 }
