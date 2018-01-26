@@ -28,22 +28,22 @@ export class ProgressBarComponent {
     @Input() selectedRequest;
     requestId: string;
     requestToDisplay;
-    value = 75;
+    value = 100;
 
     @Input()
-    max = 100;
+    max = 65;
 
     constructor(private route: ActivatedRoute, private location: Location, private requestService: RequestService) { }
 
-    // ngOnInit() {
-    //   this.route.params.forEach((urlParametersArray) => {
-    //     this.requestId = urlParametersArray['id'];
-    //   });
-    //   this.requestService.getRequestById(this.requestId).subscribe(dataLastEmittedFromObserver => {
-    //     this.requestToDisplay = dataLastEmittedFromObserver;
-    //     return this.requestToDisplay;
-    //   })
-    // }
+    ngOnInit() {
+      this.route.params.forEach((urlParametersArray) => {
+        this.requestId = urlParametersArray['id'];
+      });
+      this.requestService.getRequestById(this.requestId).subscribe(dataLastEmittedFromObserver => {
+        this.requestToDisplay = dataLastEmittedFromObserver;
+        return this.requestToDisplay;
+      })
+    }
 
     getProgress() {
         if (this.max === 0)
