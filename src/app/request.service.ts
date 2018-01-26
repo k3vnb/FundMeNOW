@@ -48,4 +48,6 @@ export class RequestService {
     requestEntryInFirebase.update({amount_collected: localUpdatedRequest.amount_collected});
   }
 
+
+
 }

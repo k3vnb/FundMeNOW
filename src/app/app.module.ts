@@ -13,6 +13,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { EditRequestComponent } from './edit-request/edit-request.component';
 import { RequestDetailComponent } from './request-detail/request-detail.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+
 
 
 export const firebaseConfig = {
@@ -30,6 +32,7 @@ export const firebaseConfig = {
     AdminComponent,
     EditRequestComponent,
     RequestDetailComponent,
+    ProgressBarComponent,
   ],
   imports: [
     BrowserModule,

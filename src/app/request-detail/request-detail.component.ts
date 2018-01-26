@@ -7,6 +7,7 @@ import { Request } from '../request.model';
 import { Router } from '@angular/router';
 import { RequestService } from '../request.service';
 
+
 @Component({
   selector: 'app-request-detail',
   templateUrl: './request-detail.component.html',
